@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2ª Avaliação</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=4ZPPM1NkpP4QNqmHP4z9TXnut9O5zf9pBWQzU8amOVZi0aHytbLwuwVla5kssRoAE14yJQ2LlwCQXg6Zbk12g_WKOrNK8VifAqVZPeHUARr3J6Piv6hoGhLtpUPIgZhc92e2BtgmsGMBgUnPQk0hBqA4uXsHKsXvMadYTqhcJQ6zuZs33mZpSv6XbX9EDRELLTEV5xg2tKs-DB5tYFcPleSXdqFojM_eTcwtmYZxpgKq5C6ErckaoLpH3JHEkW3GrBeBGK7q7X5dOtfhz6S9AwrYu3FxUbpnhF2Fbr4-j2Hm35PvcX2jaXcLtGXhiZNrKIiFIrW9OEm7mp7tEACLCJlsZLKSz_Whr35VANO4LQ-hT2_6YZj4-8CBmTqCKBgVVKeRlXw_8y1PgN-Je11Fg-7pOHT3tamJMu52cdv4wPninDrw00bst3sjVz_KXRfFL9WMVq9DLD1q3z2kPy7C2tf0NASlhzSK_FJCiQ8t-4HyvmmUvQTXSXa3Ir7Jj7hbKYrSEO-bhOxduLH-7Dh0jyS4jE---o8bRNliZUXQA26wcRWC_fVqU_6iPz9zZZucbQq9IMr5dJCDUgoSX_K8c5c8fhL6zWae3F5OZipfTY9cjIy6eDya0NWIf9odqGtwqggkrbrzXZrEPTj907ll1aN87ow14T85XgMqRuEhfi324Ohh7f9yYRsTbf2HkLXUayAovjNDHGD_7f0quti02wh6LKs7Z-g-2rRZomiAGdL1LW1YrVNv5wX5DOpw3AYIqL0LheyueWr6twW6jecDQVffCN1rXyGqpNBE1hV9WuANBxj5ozx_nIN1UAQ6dm1KtBOF-RO0HUNvk7724gSQEIbX_97Z1YX4PlMrrotZ2MdRt_EHC87qdb4UoavCUGlFcSawaZ_dxFg-Xxa-dF5M8mx5xPRqFDs54lxhNF_sjylLNUSC1YihmP9xsK6ppWOXgzpUO__rXLafAFRHOb-dv0Sj56HaWsb0zhkyhviFFWswJcHU6v5jc8RFnypY6gdn6kg3D3zb7hINh0rSanYS1AIegAx38tKi-XBNa9cr9j2ANuT1uu2dkMKQqoV8lvNlpwOic5__mD8aW1vTU3Wc2ADHSYl1QI_x3uta6gFTmWD_7AlPRANgpMV3ikpOyc7fgzfjlwPvllwb9Y9NVG6T584QiFC8cFsa9SHKKqmtt6s8imIfuTS8KMXoWGnvaW4TpNBsXZ5HxRAIS5ThMPHK_uSnkEPv8VRfBAC4pycAJbueSwS_y_zrZymUEx4UjnD28uscaw1mDoP6AKckyAXCf-r8z6tb08y05Ng81s5nfoTyB5qMU35z_2_zzhEjSb6rscie-CQ1z00nZp0gBHqqMS6qYBJkqRuSnsUv2eYWOBL5M-zG4cF0BnigonRlEvo6" nonce="16c965ff18f404264371cdf5ae4f41e4" charset="UTF-8"></script><style>
+        ul { list-style: none;}
+        input { border: 0; }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>2ª Avaliação - Javascript</h1>
+        <h3>Lista de compromissos<h3>
+        
+        <ul>
+            <li><input id="todos" type="checkbox" onclick="marcarDesmarcar()"> Todos</li>    
+            <br>
+            <li><input type="checkbox" class="c" onclick="verificarSeCheckboxTodosSeChecked()">Compromisso 1</li>
+            <li><input type="checkbox" class="c" onclick="verificarSeCheckboxTodosSeChecked()">Compromisso 2</li>
+            <li><input type="checkbox" class="c" onclick="verificarSeCheckboxTodosSeChecked()">Compromisso 3</li>
+            <li><input type="checkbox" class="c" onclick="verificarSeCheckboxTodosSeChecked()">Compromisso 4</li>
+            <li><input type="checkbox" class="c" onclick="verificarSeCheckboxTodosSeChecked()">Compromisso 5</li>
+            <li><input type="checkbox" class="c" onclick="verificarSeCheckboxTodosSeChecked()">Compromisso 6</li>
+            <li><input type="checkbox" class="c" onclick="verificarSeCheckboxTodosSeChecked()">Compromisso 7</li>
+        </ul>
+
+        <button type="button" onclick="mostrarQuantidade()">Salvar</button>
+    </div>
+</body>
+    <script>
+        let cTodos = document.getElementById('todos');
+        let compromissos = document.getElementsByClassName('c');
+
+        function marcarDesmarcar() {
+            if(cTodos.checked) {
+                for(let i = 0; i < compromissos.length; i++){
+                    compromissos[i].checked = true;
+                }              
+            } else {
+                for(let i = 0; i < compromissos.length; i++){
+                    compromissos[i].checked = false;
+                } 
+            }
+        }
+
+        function verificarSeCheckboxTodosSeChecked() {  
+            let marcarCheckboxTodos = true; 
+            for(let i = 0; i < compromissos.length; i++){      
+                if(!compromissos[i].checked) {
+                    cTodos.checked = false;
+                    marcarCheckboxTodos = false;
+                }        
+            }
+            if(marcarCheckboxTodos){
+                    cTodos.checked = true;
+            }
+        }
+
+        function contarCompromissos() { 
+            let contagem = 0;  
+            for(let i = 0; i < compromissos.length; i++){
+                if(compromissos[i].checked) {
+                    contagem += 1;
+                }
+            }
+            return contagem;            
+        }
+
+        function mostrarQuantidade() {
+            let elemento = document.getElementsByTagName('h4');          
+            if(elemento.length === 0) {
+                let h4 = document.createElement('h4');
+                let input = document.createElement('input'); 
+                let body = document.body;
+                let frase = document.createTextNode('Compromissos marcados:');
+                h4.appendChild(frase);
+                body.appendChild(h4);
+                body.appendChild(input);
+            }
+            input = document.getElementsByTagName('input');
+            input[input.length-1].value = contarCompromissos();
+        }
+    </script>
+</html>
